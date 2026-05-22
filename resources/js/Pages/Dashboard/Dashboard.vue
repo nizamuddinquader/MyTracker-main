@@ -144,3 +144,5 @@ import AppLayout from '@/Layouts/AppLayout.vue';
 defineProps({
 accounts: Array,transactions: Array,budgets: Array});
 </script>
+
+

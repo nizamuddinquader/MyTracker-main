@@ -1,9 +1,19 @@
+<script setup>
+import { ref } from 'vue';
+import Sidebar from '@/Components/Sidebar.vue';
+import Navbar from '@/Components/Navbar.vue';
+
+const sidebarOpen = ref(false);
+</script>
+
+
+
 <template>
-    <div class="min-h-screen bg-[#0b0f19] text-slate-100 flex font-sans overflow-hidden">
+    <div class="h-screen w-full bg-[#0b0f19] text-slate-100 flex font-sans overflow-hidden">
         
         <!-- Background Radial Ambient Flares -->
-        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-500/5 rounded-full blur-[150px] pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-500/5 rounded-full blur-[150px] pointer-events-none"></div>
+        <div class="absolute top-0 right-0 md:w-125 w-full h-125 bg-cyan-500/5 rounded-full blur-[150px] pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 md:w-[500px] w-full h-[500px] bg-indigo-500/5 rounded-full blur-[150px] pointer-events-none"></div>
 
         <!-- Sidebar Injector -->
         <Sidebar :is-open="sidebarOpen" @close="sidebarOpen = false" />
@@ -23,13 +33,6 @@
     </div>
 </template>
 
-<script setup>
-import { ref } from 'vue';
-import Sidebar from '@/Components/Sidebar.vue';
-import Navbar from '@/Components/Navbar.vue';
-
-const sidebarOpen = ref(false);
-</script>
 
 <style>
 /* Smooth Dark Aesthetics Custom Scrollbar */
@@ -47,3 +50,8 @@ const sidebarOpen = ref(false);
     background: #334155;
 }
 </style>
+
+
+
+
+

@@ -14,3 +14,9 @@ Route::get('/login', function () {
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard/Dashboard');
 });
+Route::get('/accounts', function () {
+    return Inertia::render('Accounts/Index');
+});
+Route::get('/create', function () {
+    return Inertia::render('Accounts/Create');
+});
