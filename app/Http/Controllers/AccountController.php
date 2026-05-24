@@ -49,11 +49,12 @@ class AccountController extends Controller
     public function edit(Account $account)
     {
         $account = Account::where('id', $account->id)
-        ->where('user_id', auth()->user()->id)->firstOrFail();
+        ->where('user_id', auth()->id)->firstOrFail();
 
         return Inertia::render('Accounts/Edit',[
             'account' => $account
         ]);
+        
     }
 
     /**
